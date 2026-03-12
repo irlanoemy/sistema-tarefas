@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Lista de Tarefas</title>
+
+    <!-- Conecta o arquivo de estilo -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Título principal da página -->
+    <h1>Lista de Tarefas</h1>
+
+    <!-- Tabela onde as tarefas serão exibidas-->
+    <table id="tabelaTarefas">
+
+        <!--Cabeçalho da tabela -->
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Custo</th>
+                <th>Data Limite</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <!-- Corpo da tabela (onde o script vai inserir tarefas) -->
+        <tbody id="listaTarefas"> <!--js coloque as tarefas aqui dentro-->
+        </tbody>
+
+    </table>
+
+    <!-- Botão para adicionar nova tarefa -->
+    <button onclick="abrirFormulario()">Adicionar Tarefa</button>
+
+    <!-- Área que mostra o total dos custos -->
+    <p>Total: R$ <span id="totalCustos">0</span></p>
+
+    <!-- Formulário simples para adicionar tarefas -->
+    <div id="formulario">
+
+        <h2>Nova Tarefa</h2>
+
+        <!-- Campo nome -->
+        <input type="text" id="nomeTarefa" placeholder="Nome da tarefa">
+
+        <!-- Campo custo -->
+        <input type="number" id="custoTarefa" placeholder="Custo">
+
+        <!-- Campo data -->
+        <input type="date" id="dataTarefa">
+
+        <!-- Botão salvar -->
+        <button onclick="adicionarTarefa()">Salvar</button>
+
+    </div>
+
+    <!-- Conecta o JavScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

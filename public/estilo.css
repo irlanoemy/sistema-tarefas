@@ -1,0 +1,35 @@
+body{
+    font-family: Arial;
+}
+
+/* tabela básica */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* bordas tabela */
+th, td{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* destaque para tarefas caras q foi pedido no doc*/
+.custo-alto{
+    background-color: yellow;
+}
+
+/* formulário começa escondido */
+#formulario{
+    display: none;
+}
+
+/* feedback visual ao arrastar */
+tr.arrastando {
+    opacity: 0.4;
+    cursor: grabbing;
+}
+
+tr[draggable="true"] {
+    cursor: grab;
+}
