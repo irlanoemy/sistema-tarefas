@@ -1,4 +1,22 @@
-const API = ""
+//ADICIONADO: função de confirmação personalizada com Sim/Não em português
+function confirmar(mensagem) {
+    return new Promise(function(resolve) {
+        document.getElementById("modalMensagem").innerText = mensagem
+        document.getElementById("modalConfirmacao").style.display = "block"
+
+        document.getElementById("modalSim").onclick = function() {
+            document.getElementById("modalConfirmacao").style.display = "none"
+            resolve(true)
+        }
+        document.getElementById("modalNao").onclick = function() {
+            document.getElementById("modalConfirmacao").style.display = "none"
+            resolve(false)
+        }
+    })
+}
+
+const API = "http://localhost:3000"
+
 
 async function carregarTarefas() {
     const res = await fetch(API + "/tarefas")
@@ -47,7 +65,9 @@ async function adicionarTarefa() {
 }
 
 async function excluirTarefa(id) {
-    if (!confirm("Deseja excluir essa tarefa?")) return
+    //ALTERADO: trocado confirm() pelo modal personalizado em português
+    const confirmado = await confirmar("Deseja excluir essa tarefa?")
+    if (!confirmado) return
     await fetch(API + "/tarefas/" + id, { method: "DELETE" })
     carregarTarefas()
 }
