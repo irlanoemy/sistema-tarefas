@@ -1,6 +1,6 @@
 import { PGlite } from "@electric-sql/pglite";
 
-const db = new PGlite();
+const db = new PGlite("./data")
 
 export async function criarTabela() {
     await db.query(`
