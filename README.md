@@ -19,7 +19,7 @@ Aplicação web para cadastro e gerenciamento de tarefas.
 ## Tecnologias
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express
-- **Banco de dados:** PGlite (PostgreSQL no browser, sem instalação)
+- **Banco de dados:** PGlite (PostgreSQL embarcado, sem instalação necessária)
 
 ## Como executar localmente
 1. Clone o repositório
@@ -36,3 +36,7 @@ Aplicação web para cadastro e gerenciamento de tarefas.
 
 5. Acesse no navegador
    http://localhost:3000
+
+   
+## Deploy
+Aplicação hospedada no Railway com volume persistente em `/app/data` para armazenamento dos dados do PGlite.
