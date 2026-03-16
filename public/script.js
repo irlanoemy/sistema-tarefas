@@ -26,6 +26,11 @@ async function carregarTarefas() {
 
 function abrirFormulario() {
     document.getElementById("formulario").style.display = "block"
+    // Após exibir o formulário, busca o campo "nomeTarefa" no HTML
+    // e chama .focus() nele, que é um método nativo do navegador
+    // que posiciona o cursor automaticamente dentro daquele input,
+    // sem o usuário precisar clicar manualmente no campo
+    document.getElementById("nomeTarefa").focus() 
 }
 
 async function adicionarTarefa() {
@@ -147,6 +152,7 @@ function renderizarTarefas(tarefas) {
         const dataFormatada = tarefa.data_limite.split("T")[0]
 
         linha.innerHTML =
+            "<td>" + tarefa.id + "</td>" + //preenche a coluna "ID" que foi adicionada acima
             "<td>" + tarefa.nome + "</td>" +
             "<td>" + formatarCusto(tarefa.custo) + "</td>" +
             "<td>" + formatarData(tarefa.data_limite) + "</td>" +

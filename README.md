@@ -3,10 +3,12 @@
 Aplicação web para cadastro e gerenciamento de tarefas.
 
 ## Links
+
 - **Aplicação:** https://sistema-tarefas-production-28b8.up.railway.app
 - **Repositório:** https://github.com/irlanoemy/sistema-tarefas
 
 ## Funcionalidades
+
 - Listar tarefas ordenadas por ordem de apresentação
 - Adicionar nova tarefa (nome, custo, data limite)
 - Editar tarefa existente
@@ -17,11 +19,13 @@ Aplicação web para cadastro e gerenciamento de tarefas.
 - Validação de nome duplicado
 
 ## Tecnologias
+
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express
 - **Banco de dados:** PGlite (PostgreSQL embarcado, sem instalação necessária)
 
 ## Como executar localmente
+
 1. Clone o repositório
    git clone https://github.com/irlanoemy/sistema-tarefas.git
 
@@ -37,6 +41,6 @@ Aplicação web para cadastro e gerenciamento de tarefas.
 5. Acesse no navegador
    http://localhost:3000
 
-   
 ## Deploy
+
 Aplicação hospedada no Railway com volume persistente em `/app/data` para armazenamento dos dados do PGlite.
